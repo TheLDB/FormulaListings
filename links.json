@@ -1,0 +1,8 @@
+{
+    "amazon": {
+        "links": ["link1", "link2"]
+    },
+    "walmart": {
+        "links": ["link1", "link2"]
+    }
+}

@@ -1,22 +1,25 @@
-import puppeteer from 'puppeteer';
+import puppeteer from "https://deno.land/x/puppeteer@9.0.2/mod.ts";
 
 interface AmazonListing {
     itemName: string
-};
+}
 
 interface WalmartListing {
-    itemName: string,
-
-}
-const evalAmazonLink = (link: string): AmazonListing => {
-    // * Open link in pupeteer and parse amazon shipping info, then return
-    return {
-        itemName: "hi"
-    }
+    itemName: string
 }
 
-const evalWalmartLink = (link: string): WalmartListing => {
-    return {
-        itemName: "hi"
-    }
+const evalAmazonLink = async (link: string): Promise<AmazonListing> => {
+    await console.log(link)
+    const listing: AmazonListing = {itemName: "itemName"}
+    return new Promise<AmazonListing>((resolve, reject) => {
+        resolve(listing)
+    })
+}
+
+const evalWalmartLink = async (link: string): Promise<WalmartListing> => {
+    await console.log(link);
+    const listing: WalmartListing = {itemName: "itemName"};
+    return new Promise<WalmartListing>((resolve, reject) => {
+        resolve(listing)
+    })
 }

@@ -1,0 +1,7 @@
+# FormulaListings
+
+## How to Use
+- Add Amazon & Walmart links to their corresponding objects in links.json
+- Clone the repo
+- Install using pnpm
+- Run using node index

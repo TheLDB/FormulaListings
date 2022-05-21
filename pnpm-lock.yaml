@@ -2,11 +2,11 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/puppeteer': ^5.4.6
-  puppeteer-core: ^14.1.1
+  puppeteer: ^14.1.1
 
 dependencies:
   '@types/puppeteer': 5.4.6
-  puppeteer-core: 14.1.1
+  puppeteer: 14.1.1
 
 packages:
 
@@ -283,9 +283,10 @@ packages:
       once: 1.4.0
     dev: false
 
-  /puppeteer-core/14.1.1:
-    resolution: {integrity: sha512-DWLzFcawn1ANg2Q06Eieing4Y0fdNI7miax3f+wEbdROzlMG4yXIWzmT6XTKyFyqOjMhW5QNIDdFJftK6oP4og==}
+  /puppeteer/14.1.1:
+    resolution: {integrity: sha512-4dC6GYR5YlXTmNO3TbYEHTdVSdml1cVD2Ok/h/f/xSTp4ITVdbRWkMjiOaEKRAhtIl6GqaP7B89zx+hfhcNGMQ==}
     engines: {node: '>=14.1.0'}
+    requiresBuild: true
     dependencies:
       cross-fetch: 3.1.5
       debug: 4.3.4
