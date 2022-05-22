@@ -1,6 +1,9 @@
+import 'puppeteer';
+
 interface WalmartListing {
     itemName: string
 }
+
 
 const evalWalmartLink = async (link: string): Promise<WalmartListing> => {
     await console.log(link);

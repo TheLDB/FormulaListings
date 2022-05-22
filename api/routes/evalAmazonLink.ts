@@ -1,3 +1,5 @@
+import puppeteer from 'puppeteer';
+
 interface AmazonListing {
     itemName: string
 }
