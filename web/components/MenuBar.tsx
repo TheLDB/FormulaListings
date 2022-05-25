@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 
-const MenuBar = () => {
+interface MenuBarProps {
+    setModalStatus: () => void;
+}
+
+const MenuBar = (props: MenuBarProps) => {
     const [ liveRed, setLiveRed ] = useState(true);
 
     useEffect(() => {
@@ -23,7 +27,7 @@ const MenuBar = () => {
                 <h1 className={`${liveRed ? 'text-red-500' : 'text-black'} text-6xl font-indie transition-all ease-in-out duration-700`}>Live</h1>
             </div>
             <div className="w-1/3 h-full flex items-center justify-end pr-4">
-                <button className="btn w-1/3 h-2/3">
+                <button onClick={props.setModalStatus} className="btn w-1/3 h-2/3">
                     <h1 className="text-white font-sora text-2xl normal-case">
                         Settings
                     </h1>

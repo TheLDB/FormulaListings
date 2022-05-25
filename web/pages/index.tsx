@@ -2,32 +2,50 @@ import type { NextPage } from "next";
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import MenuBar from "../components/MenuBar";
+import Modal from "../components/Modal";
 
 const Home: NextPage = () => {
+	const [ modalShown, setModalShown ] = useState(true);
+	const [ num, setNum ] = useState(1);
 	const [listings, setListings] = useState([
 		{
 			id: 0,
 			link: "",
-      inStock: true
+      		inStock: true
 		},
 	]);
 
+	const setModalStatus = () => {
+		setModalShown(!modalShown);
+	}
+
 	useEffect(() => {
-		const addListing = [
-			...listings,
-			{
-				id: 1,
-				link: "hni",
-        inStock: false,
-			},
-		];
-		setListings(addListing);
-	}, []);
+		setTimeout(() => {
+			const newListing = [
+				...listings,
+				{
+					id: num,
+					link: "",
+					inStock: Math.random() < 0.5,
+				}
+			]
+
+			setNum(num + 1);
+			setListings(newListing)
+		}, 1500);
+	}, [num < 5]);
 
 	return (
 		<div className="w-screen h-screen bg-site-neutral">
+			{modalShown && (
+				<div onClick={() => setModalShown(false)} className="flex bg-black/70 justify-center items-center oveflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none">
+					<div onClick={(e) => e.stopPropagation()} className="w-1/2 h-3/4">
+						<Modal />
+					</div>
+				</div>
+			)}
 			<div className="w-full h-[15%]">
-				<MenuBar />
+				<MenuBar setModalStatus={setModalStatus} />
 			</div>
 			<div className="w-full h-[85%]">
 				<div className="w-full h-1/6 SPACING-DONT-TOUCH" />

@@ -1,2 +1,5 @@
 # Cache
 .DS_Store
+
+# Debug Logs
+.pnpm-debug.log
