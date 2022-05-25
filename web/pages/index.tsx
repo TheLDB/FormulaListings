@@ -6,13 +6,15 @@ import MenuBar from '../components/MenuBar'
 const Home: NextPage = () => {
   const [ listings, setListings ] = useState([
     {
-      id: 0
+      id: 0,
+      link: "",
     }
   ]);
 
   useEffect(() => {
     const addListing = [...listings, {
-      id: 1
+      id: 1,
+      link: "hni",
     }];
     setListings(addListing);
   }, [])
@@ -30,7 +32,10 @@ const Home: NextPage = () => {
         <div className="w-full h-4/6 bg-black">
           {listings.map((listi) => {
             return (
+              <>
               <h1 className="text-white">{listi.id}</h1>
+              <h1 className="text-white">{listi.link}</h1>
+              </>
             )
           })}
         </div>
