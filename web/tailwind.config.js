@@ -16,6 +16,7 @@ module.exports = {
       },
       fontFamily: {
         'indie': ["Indie Flower"],
+        'sora': ["Sora"],
       }
     },
   },

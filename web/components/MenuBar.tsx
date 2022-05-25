@@ -13,7 +13,7 @@ const MenuBar = () => {
         <div className="w-full h-full flex flex-row">
             <div className="w-1/3 h-full flex items-center pl-4">
                 <button className="btn w-1/3 h-2/3 flex justify-center items-center">
-                    <h1 className="text-white font-indie text-3xl">
+                    <h1 className="text-white font-sora text-2xl normal-case">
                         About
                     </h1>
                 </button>
@@ -24,7 +24,7 @@ const MenuBar = () => {
             </div>
             <div className="w-1/3 h-full flex items-center justify-end pr-4">
                 <button className="btn w-1/3 h-2/3">
-                    <h1 className="text-white font-indie text-3xl">
+                    <h1 className="text-white font-sora text-2xl normal-case">
                         Settings
                     </h1>
                 </button>
