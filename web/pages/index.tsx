@@ -38,7 +38,7 @@ const Home: NextPage = () => {
 	return (
 		<div className="w-screen h-screen bg-site-neutral">
 			{modalShown && (
-				<div onClick={() => setModalShown(false)} className="flex bg-black/70 justify-center items-center oveflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none">
+				<div onClick={() => setModalShown(false)} className="flex bg-black/70 justify-center items-center oveflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none transition ease-in-out duration-700">
 					<div onClick={(e) => e.stopPropagation()} className="w-1/2 h-3/4">
 						<Modal />
 					</div>
