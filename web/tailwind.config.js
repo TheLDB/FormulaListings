@@ -4,7 +4,20 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        site: {
+          'yellow': '#f5c453',
+          'neutral': '#fefbe9',
+          'orange': '#f0a04b',
+          'green': '#183a1d',
+          'ocean': '#e1eedd',
+        }
+      },
+      fontFamily: {
+        'indie': ["Indie Flower"],
+      }
+    },
   },
   plugins: [
     require('daisyui')
